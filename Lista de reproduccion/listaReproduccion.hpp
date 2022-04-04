@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cstdlib>
 #include "nodo.hpp"
+#include "gotoxy.hpp"
 #pragma once
 
 using namespace std;
