@@ -19,8 +19,11 @@ TODO Cosas para hacer en el reproductor
 //Siguiente cancion
 //Cancion anterior
 Mover canciones de posicion usando su numero en la fila
+Crear un modo aleatorio (nomás si me aburro no le voy a meter esfuerzo a esto la vida ya me está cogiendo)
+Ser feliz
 //Arreglar que si una cancion es muy larga se desfazan lo de titulo|album|artista (Interfaz)
 */
+
 int numeroCanciones;
 class listaReproduccion
 {
