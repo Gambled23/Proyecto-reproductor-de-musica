@@ -19,7 +19,7 @@ TODO Cosas para hacer en el reproductor
 //Siguiente cancion
 //Cancion anterior
 Mover canciones de posicion usando su numero en la fila
-Arreglar que si una cancion es muy larga se desfazan lo de titulo|album|artista (Interfaz)
+//Arreglar que si una cancion es muy larga se desfazan lo de titulo|album|artista (Interfaz)
 */
 int numeroCanciones;
 class listaReproduccion
@@ -200,30 +200,6 @@ void listaReproduccion::asignarIDs()
         aux = aux->siguiente;
     }
 }
-/*void listaReproduccion::printNowPlaying()
-{
-    cout << "\t\t\tReproduciendo ahora" << endl
-         << "\t"
-         << "Posicion"
-         << "\t\t\t"
-         << "Titulo"
-         << "\t\t\t"
-         << "Artista"
-         << "\t\t\t"
-         << "Album" << endl;
-    cout << "\t" << currentSong->id << "\t\t\t" << currentSong->titulo << "\t\t\t" << currentSong->artista << "\t\t\t" << currentSong->album << "\n";
-}
-void listaReproduccion::printQueue()
-{
-    listaReproduccion::printNowPlaying(); // Imprimir la cancion actual
-    nodo *aux = currentSong->siguiente;
-    cout << "\n\t\t\tSiguientes en la lista\n";
-    while (aux != nullptr)
-    {
-        cout << "\t" << aux->id << "\t\t\t" << aux->titulo << "\t\t\t" << aux->artista << "\t\t\t" << aux->album << "\n";
-        aux = aux->siguiente;
-    }
-}*/
 void listaReproduccion::printQueue()
 {
     gotoxy(50, 1);
