@@ -31,7 +31,8 @@ void menu()
     {
         system("cls");
         lista->printQueue();
-        cout<<"\n\n1)Cancion anterior\n2)Cancion siguiente\n\n3)Buscar cancion\n4)Eliminar cancion\n0)Salir del programa\n";
+        cout << "\n=======================================================================================================================";
+        cout<<"\n\n\t\t\t1)Cancion anterior\t\t\t\t2)Cancion siguiente\n\n\t3)Buscar cancion\n\t4)Eliminar cancion\n\t0)Salir del programa\n";
         cin >> opc;
 
         switch (opc)

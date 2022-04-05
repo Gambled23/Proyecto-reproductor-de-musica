@@ -110,7 +110,7 @@ void listaReproduccion::buscarElemento(string n)
     {
         cout << "La cancion no existe en la lista" << endl;
     }
-        system("PAUSE");
+    system("PAUSE");
 }
 
 void listaReproduccion::eliminarElemento(string n)
@@ -200,7 +200,7 @@ void listaReproduccion::asignarIDs()
         aux = aux->siguiente;
     }
 }
-void listaReproduccion::printNowPlaying()
+/*void listaReproduccion::printNowPlaying()
 {
     cout << "\t\t\tReproduciendo ahora" << endl
          << "\t"
@@ -222,6 +222,47 @@ void listaReproduccion::printQueue()
     {
         cout << "\t" << aux->id << "\t\t\t" << aux->titulo << "\t\t\t" << aux->artista << "\t\t\t" << aux->album << "\n";
         aux = aux->siguiente;
+    }
+}*/
+void listaReproduccion::printQueue()
+{
+    gotoxy(50, 1);
+    cout << "Reproduciendo ahora";
+    gotoxy(10, 2);
+    cout << "Posicion";
+    gotoxy(30, 2);
+    cout << "Titulo";
+    gotoxy(60, 2);
+    cout << "Artista";
+    gotoxy(90, 2);
+    cout << "Album";
+    gotoxy(10, 3);
+    cout << currentSong->id;
+    gotoxy(30, 3);
+    cout << currentSong->titulo;
+    gotoxy(60, 3);
+    cout << currentSong->artista;
+    gotoxy(90, 3);
+    cout << currentSong->album;
+    gotoxy(1, 4);
+    cout << "----------------------------------------------------------------------------------------------------------------------";
+    gotoxy(50, 5);
+    cout << "Siguientes en la fila";
+
+    nodo *aux = currentSong->siguiente;
+    int i = 6;
+    while (aux != nullptr)
+    {
+        gotoxy(10, i);
+        cout << aux->id;
+        gotoxy(30, i);
+        cout << aux->titulo;
+        gotoxy(60, i);
+        cout << aux->artista;
+        gotoxy(90, i);
+        cout << aux->album;
+        aux = aux->siguiente;
+        i++;
     }
 }
 void listaReproduccion::cancionAnteriorSiguiente(int modo)
