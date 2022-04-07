@@ -12,4 +12,7 @@ int main()
     string cancion = "Music.wav";
     cout<<PlaySound((LPCSTR)cancion.c_str(),NULL, SND_FILENAME|SND_ASYNC);
     system("PAUSE");
+    cout<<PlaySound(NULL,NULL, SND_FILENAME|SND_ASYNC);
+    system("PAUSE");
+    return 0;
 }
