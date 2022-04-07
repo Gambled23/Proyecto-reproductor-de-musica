@@ -16,23 +16,23 @@ int main()
 void menu()
 {
     int opc;
-    string auxTitulo;
-    lista->insertaInicio("SHE","Cambiando la piel","Tal vez");
-    lista->insertarFinal("Porta","Reset","Media vida");
-    lista->insertaInicio("Violadores del verso","Doble V","Marrones, coronas, morenas");
-    lista->insertarFinal("SHE","Tiempo","Tiempo");
-    lista->insertarFinal("Lytos","Percepcion y perfeccion","A un par de copas");
-    lista->insertarFinal("Dante","Apeiron","Al final del camino");
-    lista->insertarFinal("SHE","Tiempo","Mama");
-    lista->insertarFinal("Dante","Apeiron","La gata en el tejado");
-    lista->insertarFinal("Rafa espino","Ineditos","Buenos dias princesa");
+    string auxTitulo, auxArtista, auxAlbum;
+    lista->insertaInicio("SHE", "Cambiando la piel", "Tal vez");
+    lista->insertarFinal("Porta", "Reset", "Media vida");
+    lista->insertaInicio("Violadores del verso", "Doble V", "Marrones, coronas, morenas");
+    lista->insertarFinal("SHE", "Tiempo", "Tiempo");
+    lista->insertarFinal("Lytos", "Percepcion y perfeccion", "A un par de copas");
+    lista->insertarFinal("Dante", "Apeiron", "Al final del camino");
+    lista->insertarFinal("SHE", "Tiempo", "Mama");
+    lista->insertarFinal("Dante", "Apeiron", "La gata en el tejado");
+    lista->insertarFinal("Rafa espino", "Ineditos", "Buenos dias princesa");
     lista->inicializa();
     do
     {
         system("cls");
         lista->printQueue();
         cout << "\n=======================================================================================================================";
-        cout<<"\n\n\t\t\t1)Cancion anterior\t\t\t\t2)Cancion siguiente\n\n\t3)Buscar cancion\n\t4)Eliminar cancion\n\t0)Salir del programa\n";
+        cout << "\n\n\t\t\t1)Cancion anterior\t\t\t\t2)Cancion siguiente\n\n\t3)Buscar cancion\n\t4)Eliminar cancion\n\t5)Agregar cancion\n\t0)Salir del programa\n";
         cin >> opc;
 
         switch (opc)
@@ -45,17 +45,31 @@ void menu()
             break;
         case 3:
             system("cls");
-            cout<<"Ingresa el titulo de la cancion a buscar\n";
+            cout << "Ingresa el titulo de la cancion a buscar\n";
             cin.sync();
             getline(cin, auxTitulo);
             lista->buscarElemento(auxTitulo);
             break;
         case 4:
             system("cls");
-            cout<<"Ingresa el titulo de la cancion a eliminar\n";
+            cout << "Ingresa el titulo de la cancion a eliminar\n";
             cin.sync();
             getline(cin, auxTitulo);
             lista->eliminarElemento(auxTitulo);
+            break;
+        case 5:
+            system("cls");
+            cout << "Ingresa el titulo de la cancion a agregar\n";
+            cin.sync();
+            getline(cin, auxTitulo);
+            cout << "Ingresa el album de la cancion a agregar\n";
+            cin.sync();
+            getline(cin, auxAlbum);
+            cout << "Ingresa el artista de la cancion a agregar\n";
+            cin.sync();
+            getline(cin, auxArtista);
+            lista->insertarFinal(auxArtista, auxAlbum, auxTitulo);
+            lista->asignarIDs();
             break;
         case 0:
             cout << "Gracias por su preferencia" << endl;
