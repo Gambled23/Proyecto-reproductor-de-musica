@@ -210,7 +210,7 @@ void listaReproduccion::asignarIDs()
 }
 void listaReproduccion::printQueue()
 {
-    
+    listaReproduccion::reproducirCancion();
     gotoxy(50, 1);
     cout << "Reproduciendo ahora";
     gotoxy(10, 2);
@@ -281,6 +281,8 @@ void listaReproduccion::cancionAnteriorSiguiente(int modo)
 }
 void listaReproduccion::reproducirCancion()
 {
-    
+    cout<<PlaySound(NULL,NULL, SND_FILENAME|SND_ASYNC); 
+    string cancion = currentSong->titulo + ".wav";
+    cout<<PlaySound((LPCSTR)cancion.c_str(),NULL, SND_FILENAME|SND_ASYNC); 
 }
 #endif
