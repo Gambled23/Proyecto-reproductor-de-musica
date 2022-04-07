@@ -2,6 +2,10 @@
 #define LISTAREPRODUCCION_H
 #include <iostream>
 #include <cstdlib>
+#include <stdio.h>
+#include <conio.h>
+#include <Windows.h>
+#include <string>
 #include "nodo.hpp"
 #include "gotoxy.hpp"
 #pragma once
@@ -42,6 +46,7 @@ public:
     void calcularCanciones();
     void cancionAnteriorSiguiente(int);
     void asignarIDs();
+    void reproducirCancion();
     // Operaciones visuales
     void printNowPlaying();
     void printQueue();
@@ -205,6 +210,7 @@ void listaReproduccion::asignarIDs()
 }
 void listaReproduccion::printQueue()
 {
+    
     gotoxy(50, 1);
     cout << "Reproduciendo ahora";
     gotoxy(10, 2);
@@ -272,5 +278,9 @@ void listaReproduccion::cancionAnteriorSiguiente(int modo)
             system("PAUSE");
         }
     }
+}
+void listaReproduccion::reproducirCancion()
+{
+    
 }
 #endif
