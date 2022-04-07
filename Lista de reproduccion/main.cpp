@@ -17,15 +17,9 @@ void menu()
 {
     int opc;
     string auxTitulo, auxArtista, auxAlbum;
-    lista->insertaInicio("SHE", "Cambiando la piel", "Tal vez");
-    lista->insertarFinal("Porta", "Reset", "Media vida");
-    lista->insertaInicio("Violadores del verso", "Doble V", "Marrones, coronas, morenas");
-    lista->insertarFinal("SHE", "Tiempo", "Tiempo");
-    lista->insertarFinal("Lytos", "Percepcion y perfeccion", "A un par de copas");
-    lista->insertarFinal("Dante", "Apeiron", "Al final del camino");
-    lista->insertarFinal("SHE", "Tiempo", "Mama");
-    lista->insertarFinal("Dante", "Apeiron", "La gata en el tejado");
-    lista->insertarFinal("Rafa espino", "Ineditos", "Buenos dias princesa");
+    lista->insertaInicio("Watsky", "New kind of sexy", "Danger");
+    lista->insertarFinal("Watsky", "New kind of sexy", "They are not ready");
+    lista->insertaInicio("Watsky", "New kind of sexy", "Kidnap your boyfriend");
     lista->inicializa();
     do
     {
